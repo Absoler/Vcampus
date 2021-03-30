@@ -1,19 +1,19 @@
 package util;
 
-abstract public class User {
-	private boolean userType;	//1 - teacher
+import java.io.Serializable;
+
+abstract public class User implements Serializable {
+	private static final long serialVersionUID = 50000;
+	private int userType;	//0- student 1 - teacher 2 - admin
 	private int id;
+	private String realName;
 	private String nickName;
 	private String pwd;
 	private double deposit;
 	private int age;
 	private int borrowNum;
-	public boolean isUserType() {
-		return userType;
-	}
-	public void setUserType(boolean userType) {
-		this.userType = userType;
-	}
+	private String sex;
+
 	public int getId() {
 		return id;
 	}
@@ -49,6 +49,24 @@ abstract public class User {
 	}
 	public void setBorrowNum(int borrowNum) {
 		this.borrowNum = borrowNum;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	public int getUserType() {
+		return userType;
+	}
+	public void setUserType(int userType) {
+		this.userType = userType;
 	}
 	
 }

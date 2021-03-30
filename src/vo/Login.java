@@ -3,16 +3,12 @@ package vo;
 import java.io.Serializable;
 
 public class Login implements Serializable {
-	private boolean userType;
+	private static final long serialVersionUID = 50000;
+	private int userType;
 	private int id;
 	private String pwd;
 	private String nickName;
-	public boolean isUserType() {
-		return userType;
-	}
-	public void setUserType(boolean userType) {
-		this.userType = userType;
-	}
+	
 	public int getId() {
 		return id;
 	}
@@ -30,5 +26,11 @@ public class Login implements Serializable {
 	}
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
+	}
+	public int getUserType() {
+		return userType;
+	}
+	public void setUserType(int userType) {
+		this.userType = userType;
 	}
 }
